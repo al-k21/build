@@ -46,7 +46,7 @@ valid = {
   'type': ('infra', 'release', 'test'),
 
   # providers - validated for consistency
-  'provider': ('azure', 'digitalocean', 'joyent', 'ibm', 'linuxonecc',
+  'provider': ('azure', 'dragons', 'digitalocean', 'joyent', 'ibm', 'linuxonecc',
                'mininodes', 'msft', 'osuosl', 'rackspace', 'requireio',
                'scaleway', 'softlayer', 'voxer', 'packetnet', 'nearform')
 }
