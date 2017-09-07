@@ -31,6 +31,12 @@
         - "{{ role_path }}/tasks/partials/tap2junit/pip.yml"
       skip: true
 
+- name: Set authorized key took from file
+  authorized_key:
+    user: iojs
+    state: present
+    key: "{{ lookup('file', '../../../group_vars/jenkins_id_rsa.pub') }}"
+
 - name: download slave.jar
   get_url:
     url: "{{ jenkins_worker_jar }}"

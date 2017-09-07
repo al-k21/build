@@ -10,6 +10,14 @@
   - "!test-joyent-freebsd10-x64-2"
   - "!test-rackspace-freebsd10-x64-1"
 
+  vars_prompt:
+    - name: "FTP3USER"
+      prompt: "Enter w3 username"
+      private: no
+    - name: "FTP3PASS"
+      prompt: "Enter w3 password"
+      private: yes
+
   roles:
     - bootstrap
     - package-upgrade
@@ -20,3 +28,11 @@
     - name: check if secret is properly set
       fail:
       failed_when: not secret
+    - name: run the registration script
+      script: ../../../scripts/script.sh
+      become: true
+
+  environment:
+    FTP3USER: "{{ FTP3USER }}"
+    FTP3PASS: "{{ FTP3PASS }}"
+    become: true

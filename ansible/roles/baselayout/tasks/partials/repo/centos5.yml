@@ -16,3 +16,4 @@
   yum:
     name: "http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm"
     state: present
+  ignore_errors: yes

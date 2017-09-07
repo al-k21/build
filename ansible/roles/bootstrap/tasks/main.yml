@@ -3,7 +3,6 @@
 #
 # bootstrap packages required for ansible to work
 #
-
   - name: run os-specific bootstrap
     include: "{{ bootstrap_include }}"
     loop_control:
