@@ -6,3 +6,4 @@
 
   - name: upgrade installed packages
     yum: name=* state=latest
+    ignore_errors: yes

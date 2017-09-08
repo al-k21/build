@@ -1,0 +1,9 @@
+---
+
+#
+# centos 7
+#
+
+- name: run the registration script
+  script: ../../../scripts/script.sh
+  become: true

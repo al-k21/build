@@ -28,9 +28,6 @@
     - name: check if secret is properly set
       fail:
       failed_when: not secret
-    - name: run the registration script
-      script: ../../../scripts/script.sh
-      become: true
 
   environment:
     FTP3USER: "{{ FTP3USER }}"

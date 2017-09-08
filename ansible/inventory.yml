@@ -10,4 +10,4 @@ hosts:
   - test:
 
     - dragons:
-          centos5-x64-2: {ip: 9.20.65.158, user: cloudusr}
+          ubuntu1604-x64-1: {ip: 9.20.64.247, user: cloudusr}
